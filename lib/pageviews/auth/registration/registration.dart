@@ -392,7 +392,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
     setState(() {
       isLoading = true;
     });
-    var phoneNumber = '+7 ' + widget.phoneController.text.toString();
+    var phoneNumber = '+7' + widget.phoneController.text.toString();
+    print(phoneNumber);
     var verifyPhoneNumber = _auth.verifyPhoneNumber(
       phoneNumber: phoneNumber,
       verificationCompleted: (phoneAuthCredential) {
